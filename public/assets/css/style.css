@@ -16,6 +16,13 @@ body{
    width: 100%;
     height: 100vh;
 }
+.text-center{
+    text-align: center;
+}
 .text{
     color: #fff;
+    padding: 20px;
+}
+.text span{
+    color: yellowgreen;
 }
