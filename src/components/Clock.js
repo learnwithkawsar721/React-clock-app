@@ -24,9 +24,11 @@ class Clock extends React.Component{
    /* Class component এ rander() মেথড লিখতে হয়। এই মেথড কম্পনেন্ট কে re-use করে।  */
     render(){
       return (
-        <h1 className="text">
-            {this.state.date.toLocaleTimeString(this.props.local)}
-        </h1>
+       <div className="clock">
+            <h1 className="text">
+                 {this.state.date.toLocaleTimeString(this.props.local)}
+            </h1>
+       </div>
       );
     }
 }
