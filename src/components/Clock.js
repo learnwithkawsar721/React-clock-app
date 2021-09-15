@@ -12,7 +12,7 @@ class Clock extends React.Component{
   /* যদি propos এর প্রয়োজন না হয় তাহলে consttuctor লিখতে হবে না। */
    state = {
      date:new Date(),
-     local:'bn-Bd'
+     local:'bn-BD'
     };
 
    componentDidMount(){
@@ -35,7 +35,6 @@ class Clock extends React.Component{
    }
    /* Class component এ rander() মেথড লিখতে হয়। এই মেথড কম্পনেন্ট কে re-use করে।  */
     render(){
-      console.log("Clock Component render");
       const {date,local}=this.state;
       return (
        <div className="clock">
@@ -44,7 +43,9 @@ class Clock extends React.Component{
             <h1 className="text">
                  {date.toLocaleTimeString(local)}
             </h1>
-            <Button change={this.hendelClick} local="en-US" />
+            {local==="bn-BD"?(<Button change={this.hendelClick} local="en-US" />):(<Button change={this.hendelClick} local="bn-BD" />)
+            }
+            
           </div>
        </div>
       );
