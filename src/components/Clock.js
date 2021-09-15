@@ -1,4 +1,6 @@
 import React from 'react'
+import Button from './Button';
+
 
 class Clock extends React.Component{
     /* যদি propos এর প্রয়োজন হয় তাহলে consttuctor লিখতে হবে । আর যদি প্রয়োজন না হয় তাহলে লিখতে হবে না।  */
@@ -26,13 +28,14 @@ class Clock extends React.Component{
     })
    }
    // hendelClick button 
-   hendelClick(local){
+   hendelClick=(local)=>{
      this.setState({
        local,
      })
    }
    /* Class component এ rander() মেথড লিখতে হয়। এই মেথড কম্পনেন্ট কে re-use করে।  */
     render(){
+      console.log("Clock Component render");
       const {date,local}=this.state;
       return (
        <div className="clock">
@@ -41,7 +44,7 @@ class Clock extends React.Component{
             <h1 className="text">
                  {date.toLocaleTimeString(local)}
             </h1>
-            <button className="btn" onClick={this.hendelClick.bind(this,'en-US')}>Click her</button>
+            <Button change={this.hendelClick} local="en-US" />
           </div>
        </div>
       );
