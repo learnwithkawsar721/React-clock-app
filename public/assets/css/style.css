@@ -26,3 +26,14 @@ body{
 .text span{
     color: yellowgreen;
 }
+.btn{
+    border: none;
+    background-color: crimson;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+}
