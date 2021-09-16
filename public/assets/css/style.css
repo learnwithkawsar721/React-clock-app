@@ -43,8 +43,8 @@ body{
     width: 300px;
     border-radius: 10px;
     font-size: 20px;
-    padding: 10px;
 }
 .form:focus{
     outline: 0;
 }
+
