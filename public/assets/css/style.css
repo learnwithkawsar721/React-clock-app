@@ -37,3 +37,14 @@ body{
     border-bottom-right-radius: 20px;
     cursor: pointer;
 }
+
+.form{
+    height: 40px;
+    width: 300px;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 10px;
+}
+.form:focus{
+    outline: 0;
+}
