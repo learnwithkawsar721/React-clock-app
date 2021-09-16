@@ -8,6 +8,9 @@ export default class Form extends React.Component {
     }
     
     hendelChange =(e)=>{
+        // this.setState({
+        //    [e.target.name]: e.target.value,
+        // })
         if(e.target.type === 'text'){
             this.setState({
                 title: e.target.value,
@@ -44,13 +47,13 @@ export default class Form extends React.Component {
                     <textarea name="text" value={text} onChange={this.hendelChange} className="form"/>
                     <br/>
                     <br/>
-                    <select className="form" value={library} onChange={this.hendelChange}>
+                    <select name="books" className="form" value={library} onChange={this.hendelChange}>
                         <option value="React">React</option>
                         <option value="Angolar">Angolar</option>
                     </select>
                     <br/>
                     <br/>
-                    <input type="checkbox" checked={isAwesome} onChange={this.hendelChange} />
+                    <input name="isAwsome" type="checkbox" checked={isAwesome} onChange={this.hendelChange} />
                     <br/>
                     <br/>
                     <input type="submit" className="btn" value="Submit" />
